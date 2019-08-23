@@ -48,8 +48,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Base\BaseJTableResult.cs" />
+    <Compile Include="Base\BaseViewModel.cs" />
+    <Compile Include="Interfaces\IBaseViewModel.cs" />
+    <Compile Include="Interfaces\IJTableResult.cs" />
+    <Compile Include="jTable\ComboViewModel.cs" />
+    <Compile Include="jTable\RequestViewModel.cs" />
+    <Compile Include="jTable\ResultsViewModel.cs" />
+    <Compile Include="jTable\ResultViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\LoginViewModel.cs" />
+    <Compile Include="ViewModels\OptionsViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
