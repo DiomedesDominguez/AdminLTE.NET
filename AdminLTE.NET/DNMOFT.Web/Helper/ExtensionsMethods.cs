@@ -6,36 +6,34 @@
 // Last Modified By : Diomedes Dominguez
 // Last Modified On : 2019-08-23
 // ***********************************************************************
-// <copyright file="RouteConfig.cs" company="DNMOFT">
+// <copyright file="ExtensionsMethods.cs" company="DNMOFT">
 //     Copyright ©  2019
 // </copyright>
 // <summary></summary>
 // ***********************************************************************
-namespace DNMOFT.Web
+namespace DNMOFT.Web.Helper
 {
     using System.Web.Mvc;
-    using System.Web.Routing;
 
     /// <summary>
-    /// Class RouteConfig.
+    /// Class ExtensionsMethods.
     /// </summary>
-    public class RouteConfig
+    public static class ExtensionsMethods
     {
         #region Methods
 
         /// <summary>
-        /// Registers the routes.
+        /// Determines whether the enviroment running is debug.
         /// </summary>
-        /// <param name="routes">The routes.</param>
-        public static void RegisterRoutes(RouteCollection routes)
+        /// <param name="helper">The helper.</param>
+        /// <returns><c>true</c> if the specified helper is debug; otherwise, <c>false</c>.</returns>
+        public static bool IsDebug(this HtmlHelper helper)
         {
-            routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
-
-            routes.MapRoute(
-                name: "Default",
-                url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
-            );
+#if DEBUG
+            return true;
+#else
+            return false;
+#endif
         }
 
         #endregion Methods

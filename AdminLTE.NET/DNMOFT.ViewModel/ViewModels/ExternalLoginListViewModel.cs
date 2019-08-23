@@ -6,7 +6,7 @@
 // Last Modified By : Diomedes Dominguez
 // Last Modified On : 2019-08-23
 // ***********************************************************************
-// <copyright file="OptionsViewModel.cs" company="DNMOFT">
+// <copyright file="ExternalLoginListViewModel.cs" company="DNMOFT">
 //     Copyright ©  2019
 // </copyright>
 // <summary></summary>
@@ -14,24 +14,14 @@
 namespace DNMOFT.ViewModel
 {
     /// <summary>
-    /// Class OptionsViewModel.
+    /// Class ExternalLoginListViewModel.
     /// </summary>
-    public class OptionsViewModel
+    public class ExternalLoginListViewModel
     {
-        #region Properties
-
         /// <summary>
-        /// Gets or sets the display text.
+        /// Gets or sets the return URL.
         /// </summary>
-        /// <value>The display text.</value>
-        public string DisplayText { get; set; }
-
-        /// <summary>
-        /// Gets or sets the value.
-        /// </summary>
-        /// <value>The value.</value>
-        public string Value { get; set; }
-
-        #endregion Properties
+        /// <value>The return URL.</value>
+        public string ReturnUrl { get; set; }
     }
 }

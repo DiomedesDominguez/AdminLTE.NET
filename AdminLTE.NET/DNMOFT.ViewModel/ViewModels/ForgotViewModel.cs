@@ -6,32 +6,26 @@
 // Last Modified By : Diomedes Dominguez
 // Last Modified On : 2019-08-23
 // ***********************************************************************
-// <copyright file="OptionsViewModel.cs" company="DNMOFT">
+// <copyright file="ForgotViewModel.cs" company="DNMOFT">
 //     Copyright ©  2019
 // </copyright>
 // <summary></summary>
 // ***********************************************************************
+using System.ComponentModel.DataAnnotations;
+
 namespace DNMOFT.ViewModel
 {
     /// <summary>
-    /// Class OptionsViewModel.
+    /// Class ForgotViewModel.
     /// </summary>
-    public class OptionsViewModel
+    public class ForgotViewModel
     {
-        #region Properties
-
         /// <summary>
-        /// Gets or sets the display text.
+        /// Gets or sets the email.
         /// </summary>
-        /// <value>The display text.</value>
-        public string DisplayText { get; set; }
-
-        /// <summary>
-        /// Gets or sets the value.
-        /// </summary>
-        /// <value>The value.</value>
-        public string Value { get; set; }
-
-        #endregion Properties
+        /// <value>The email.</value>
+        [Required]
+        [Display(Name = "Email")]
+        public string Email { get; set; }
     }
 }

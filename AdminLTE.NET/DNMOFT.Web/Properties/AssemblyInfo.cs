@@ -1,4 +1,6 @@
-﻿using System.Reflection;
+﻿using DNMOFT.DataAccess.Aspects;
+using DNMOFT.Web.Aspects;
+using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
@@ -33,3 +35,6 @@ using System.Runtime.InteropServices;
 // by using the '*' as shown below:
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: Elmah(AspectPriority = 0)]
+[assembly: JsonError(AspectPriority = 1)]
+[assembly: JsonError(AspectPriority = 2, AttributeExclude = true, AttributeTargetTypes = "DNMOFT.Web.Aspects.*")]

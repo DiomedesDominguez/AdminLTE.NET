@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<mvcSiteMap xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xmlns="http://mvcsitemap.codeplex.com/schemas/MvcSiteMap-File-4.0"
+            xsi:schemaLocation="http://mvcsitemap.codeplex.com/schemas/MvcSiteMap-File-4.0 MvcSiteMapSchema.xsd">
+
+  <mvcSiteMapNode key="root" controller="Home" action="Index" title="root">
+    <mvcSiteMapNode key="MAIN NAVIGATION" title="MAIN NAVIGATION" clickable="false"  controller="Home" action="Index">
+      <mvcSiteMapNode title="Inicio" controller="Home" action="Index" description="dashboard"  />
+      <mvcSiteMapNode key="MiEmpresa" title="Mi Empresa" description="th" controller="Home" action="Pepe" >
+        <!--<mvcSiteMapNode title="Empresas" controller="Empresas" action="Index" roles="*"  description="shopping-cart" />-->
+        <mvcSiteMapNode title="Clasificación de clientes" controller="ClasificacionesClientes" action="Index" roles="*"  description="edit" />
+        <mvcSiteMapNode title="Clientes" controller="Clientes" action="Index" roles="*"  description="user" />
+        <mvcSiteMapNode title="Distribución" controller="Almacenes" action="Pepe" roles="*"  description="truck">
+          <mvcSiteMapNode title="Almacenes" controller="Almacenes" action="Index" roles="*"  description="truck"/>
+          <mvcSiteMapNode title="Familia de productos" controller="ProductosFamilias" action="Index" roles="*" description="calendar-check-o" />
+          <mvcSiteMapNode title="Presentaciones" controller="Presentaciones" action="Index" roles="*" description="calendar-check-o" />
+          <mvcSiteMapNode title="Productos" controller="Productos" action="Index" roles="*" description="calendar-check-o" />
+          <mvcSiteMapNode title="Zonas de ventas" controller="Zonas" action="Index" roles="*"  description="map-marker" />
+          <mvcSiteMapNode title="Vendedores" controller="Vendedores" action="Index" roles="*"  description="map-marker" />
+          <mvcSiteMapNode title="Ubicaciones" controller="Ubicaciones" action="Index" roles="*" description="calendar-check-o" />
+          <mvcSiteMapNode title="Asignación de vendedores" controller="Distribuciones" action="Index" roles="*" description="arrows-h" />
+        </mvcSiteMapNode>
+        <mvcSiteMapNode title="Transportación" controller="Transportes" action="Pepe" roles="*"  description="truck" >
+          <mvcSiteMapNode title="Compañías de transporte" controller="CompaniasTransportes" action="Index" roles="*" description="copyright"  />
+          <mvcSiteMapNode title="Transportes" controller="Transportes" action="Index" roles="*"  description="truck" />
+          <mvcSiteMapNode title="Transportistas" controller="Transportistas" action="Index" roles="*"  description="truck" />
+        </mvcSiteMapNode>
+        <!--<mvcSiteMapNode title="Itinerarios" controller="Itinerarios" action="Index" roles="*" description="calendar-check-o" />-->
+        <mvcSiteMapNode title="Impuestos" controller="Impuestos" action="Index" roles="*" description="calendar-check-o" />
+        <mvcSiteMapNode title="Tipos de proveedores" controller="TiposProveedores" action="Index" roles="*" description="calendar-check-o" />
+        <mvcSiteMapNode title="Proveedores" controller="Proveedores" action="Index" roles="*" description="calendar-check-o" />
+        <mvcSiteMapNode title="Servicios" controller="Servicios" action="Index" roles="*" description="calendar-check-o" />
+        <mvcSiteMapNode title="Ventas" controller="Ordenes" action="Pepe" roles="*" description="calendar-check-o" >
+          <mvcSiteMapNode title="Ordenes" controller="Ordenes" action="Index" roles="*" description="calendar-check-o" />
+          <mvcSiteMapNode title="Ofertas" controller="Ofertas" action="Index" roles="*" description="calendar-check-o" />
+          <mvcSiteMapNode title="Asignación transportistas" controller="TransportistasAsignaciones" action="Index" roles="*"  description="truck" />
+        </mvcSiteMapNode>
+      </mvcSiteMapNode>
+    </mvcSiteMapNode>
+  </mvcSiteMapNode>
+</mvcSiteMap>
