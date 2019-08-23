@@ -6,9 +6,9 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("DNMOFT.DataAccess")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("This library is to serve as a data access layer using Entity Framework.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("DNMOFT")]
 [assembly: AssemblyProduct("DNMOFT.DataAccess")]
 [assembly: AssemblyCopyright("Copyright ©  2019")]
 [assembly: AssemblyTrademark("")]

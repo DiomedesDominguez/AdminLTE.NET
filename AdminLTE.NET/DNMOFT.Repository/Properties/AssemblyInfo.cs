@@ -1,4 +1,5 @@
-﻿using System.Reflection;
+﻿using DNMOFT.DataAccess.Aspects;
+using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
@@ -6,9 +7,9 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("DNMOFT.Repository")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("This library is to serve as a repository of methods to be executed directly to the database.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("DNMOFT")]
 [assembly: AssemblyProduct("DNMOFT.Repository")]
 [assembly: AssemblyCopyright("Copyright ©  2019")]
 [assembly: AssemblyTrademark("")]
@@ -34,3 +35,4 @@ using System.Runtime.InteropServices;
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: Elmah]
