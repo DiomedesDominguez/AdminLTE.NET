@@ -36,8 +36,8 @@ PostSharp, in the other hand, is mandatory. If it's repetitive, it can be automa
 I accept suggestions and recommendations.
 
 ## GOALS
-Update all references
-Replicate the AdminLTE v3 https://github.com/ColorlibHQ/AdminLTE/tree/v3-dev
-Recreate the N-layers structure of the project.
-Create the package for the marketplace
-Create a .NET Core package.
+    Update all references
+    Replicate the AdminLTE v3 https://github.com/ColorlibHQ/AdminLTE/tree/v3-dev
+    Recreate the N-layers structure of the project.
+    Create the package for the marketplace
+    Create a .NET Core package.
