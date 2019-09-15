@@ -1,0 +1,20 @@
+﻿@model MvcSiteMapProvider.Web.Html.Models.MenuHelperModel
+@using System.Web.Mvc.Html
+@using MvcSiteMapProvider.Web.Html.Models
+<ul class="nav nav-pills nav-sidebar flex-column" data-widget="tree" role="menu" data-accordion="false">
+    @foreach (var node in Model.Nodes)
+    {
+        if (node == Model.First())
+        {
+            continue;
+        }
+
+        <li class="nav-header">
+            @Html.DisplayFor(m => node)
+        </li>
+        if (node.Children.Any())
+        {
+            @Html.DisplayFor(m => node.Children)
+        }
+    }
+</ul>

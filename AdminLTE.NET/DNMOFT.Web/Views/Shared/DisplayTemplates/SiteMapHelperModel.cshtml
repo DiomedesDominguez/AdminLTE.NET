@@ -1,0 +1,31 @@
+﻿@model MvcSiteMapProvider.Web.Html.Models.SiteMapHelperModel
+@using System.Web.Mvc.Html
+@using MvcSiteMapProvider.Web.Html.Models
+
+@foreach (var node in Model.Nodes)
+{
+    var clase = string.Empty;
+    if (node.IsCurrentNode)
+    {
+        clase += "active ";
+    }
+
+    if (node.Children.Any())
+    {
+        clase += "treeview ";
+        if (node.Children.Any(x => x.IsCurrentNode || x.Children.Any(z => z.IsCurrentNode || z.Children.Any(c=>c.IsCurrentNode))))
+        {
+            clase += "active ";
+        }
+    }
+
+    <li class="@clase">
+        @Html.DisplayFor(m => node)
+        @if (node.Children.Any())
+        {
+            <ul class="treeview-menu">
+                @Html.DisplayFor(m => node.Children)
+            </ul>
+        }
+    </li>
+}

@@ -1,0 +1,12 @@
+﻿@model MvcSiteMapProvider.Web.Html.Models.SiteMapPathHelperModel
+@using System.Web.Mvc.Html
+@using System.Linq
+@using MvcSiteMapProvider.Web.Html.Models
+@foreach (var node in Model)
+{
+    if (node == Model.First())
+    {
+        continue;
+    }
+    <li class="breadcrumb-item"><a href="#"><i class="@node.Description"></i> @node.Title</a></li>
+}
