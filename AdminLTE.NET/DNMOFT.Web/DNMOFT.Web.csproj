@@ -302,6 +302,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\css\adminlte.css" />
+    <Content Include="Content\css\fontawesome.css" />
     <Content Include="Content\css\bootstrap-colorpicker.css" />
     <Content Include="Content\css\bootstrap-duallistbox.css" />
     <Content Include="Content\css\bootstrap-grid.css" />
@@ -353,6 +354,9 @@
     <Content Include="Content\css\themes\base\tabs.css" />
     <Content Include="Content\css\themes\base\theme.css" />
     <Content Include="Content\css\themes\base\tooltip.css" />
+    <Content Include="Content\fonts\fa-brands-400.svg" />
+    <Content Include="Content\fonts\fa-regular-400.svg" />
+    <Content Include="Content\fonts\fa-solid-900.svg" />
     <Content Include="Content\img\AdminLTELogo.png" />
     <Content Include="Content\img\avatar.png" />
     <Content Include="Content\img\avatar04.png" />
@@ -422,6 +426,18 @@
     <Content Include="Scripts\esm\popper-utils.min.js.map" />
     <Content Include="Scripts\esm\popper-utils.js.map" />
     <Content Include="Mvc.sitemap" />
+    <Content Include="Content\fonts\fa-brands-400.eot" />
+    <Content Include="Content\fonts\fa-brands-400.ttf" />
+    <Content Include="Content\fonts\fa-brands-400.woff" />
+    <Content Include="Content\fonts\fa-brands-400.woff2" />
+    <Content Include="Content\fonts\fa-regular-400.eot" />
+    <Content Include="Content\fonts\fa-regular-400.ttf" />
+    <Content Include="Content\fonts\fa-regular-400.woff" />
+    <Content Include="Content\fonts\fa-regular-400.woff2" />
+    <Content Include="Content\fonts\fa-solid-900.eot" />
+    <Content Include="Content\fonts\fa-solid-900.ttf" />
+    <Content Include="Content\fonts\fa-solid-900.woff" />
+    <Content Include="Content\fonts\fa-solid-900.woff2" />
     <None Include="MvcSiteMapSchema.xsd">
       <SubType>Designer</SubType>
     </None>
