@@ -34,3 +34,10 @@ Some libraries (like knockoutJS or AutoMapper) are not mandatory.
 PostSharp, in the other hand, is mandatory. If it's repetitive, it can be automated and I personally can't have a project without it and you should also have it. I'm saving more than 5k lines of code in a small project  just by using it. You can use the essentials version if you want to or apply for a full lifetime edition for free at https://www.postsharp.net/purchase/discounts
 
 I accept suggestions and recommendations.
+
+## GOALS
+Update all references
+Replicate the AdminLTE v3 https://github.com/ColorlibHQ/AdminLTE/tree/v3-dev
+Recreate the N-layers structure of the project.
+Create the package for the marketplace
+Create a .NET Core package.
