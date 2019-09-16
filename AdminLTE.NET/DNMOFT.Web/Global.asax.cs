@@ -4,7 +4,7 @@
 // Created          : 2019-08-23
 //
 // Last Modified By : Diomedes Dominguez
-// Last Modified On : 2019-08-23
+// Last Modified On : 2019-09-16
 // ***********************************************************************
 // <copyright file="Global.asax.cs" company="DNMOFT">
 //     Copyright ©  2019
@@ -13,6 +13,7 @@
 // ***********************************************************************
 namespace DNMOFT.Web
 {
+    using System;
     using System.Data.Entity.SqlServer;
     using System.Web.Http;
     using System.Web.Mvc;
@@ -29,6 +30,33 @@ namespace DNMOFT.Web
     public class MvcApplication : System.Web.HttpApplication
     {
         #region Methods
+
+        /// <summary>
+        /// Handles the BeginRequest event of the Application control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
+        protected void Application_BeginRequest(object sender, EventArgs e)
+        {
+            string[] headers = { "Server", "X-AspNet-Version", "ETag", "X-Powered-By" };
+
+            if (!Response.HeadersWritten)
+            {
+                Response.AddOnSendingHeaders((c) =>
+                {
+                    if (c != null && c.Response != null && c.Response.Headers != null)
+                    {
+                        foreach (string header in headers)
+                        {
+                            if (c.Response.Headers[header] != null)
+                            {
+                                c.Response.Headers.Remove(header);
+                            }
+                        }
+                    }
+                });
+            }
+        }
 
         /// <summary>
         /// Applications the start.

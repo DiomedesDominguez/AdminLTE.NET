@@ -22,10 +22,11 @@ namespace DNMOFT.Web.Controllers
     using DNMOFT.DataAccess.Helpers;
     using DNMOFT.ViewModel;
     using DNMOFT.ViewModel.ViewModels;
-
+    using DNMOFT.Web.Helper;
     using Microsoft.AspNet.Identity;
     using Microsoft.AspNet.Identity.Owin;
     using Microsoft.Owin.Security;
+    using MvcThrottle;
 
     /// <summary>
     /// Class AccountController.
@@ -33,6 +34,7 @@ namespace DNMOFT.Web.Controllers
     /// </summary>
     /// <seealso cref="System.Web.Mvc.Controller" />
     [Authorize]
+    [CompressFilter, EnableThrottling]
     public class AccountController : Controller
     {
         #region Fields

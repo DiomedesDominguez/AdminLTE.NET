@@ -1,24 +1,34 @@
-﻿using System;
-using System.IO;
-using System.Runtime.InteropServices;
-
+﻿// ***********************************************************************
+// Assembly         : DNMOFT.Business
+// Author           : Diomedes Domínguez
+// Created          : 2019-08-23
+//
+// Last Modified By : Diomedes Domínguez
+// Last Modified On : 2019-09-16
+// ***********************************************************************
+// <copyright file="Loader.cs" company="DNMOFT">
+//     Copyright ©  2019
+// </copyright>
+// <summary></summary>
+// ***********************************************************************
 namespace SqlServerTypes
 {
+    using System;
+    using System.IO;
+    using System.Runtime.InteropServices;
+
     /// <summary>
-    /// Utility methods related to CLR Types for SQL Server 
+    /// Utility methods related to CLR Types for SQL Server
     /// </summary>
     public class Utilities
     {
-        [DllImport("kernel32.dll", CharSet = CharSet.Auto, SetLastError = true)]
-        private static extern IntPtr LoadLibrary(string libname);
+        #region Methods
 
         /// <summary>
         /// Loads the required native assemblies for the current architecture (x86 or x64)
         /// </summary>
-        /// <param name="rootApplicationPath">
-        /// Root path of the current application. Use Server.MapPath(".") for ASP.NET applications
-        /// and AppDomain.CurrentDomain.BaseDirectory for desktop applications.
-        /// </param>
+        /// <param name="rootApplicationPath">Root path of the current application. Use Server.MapPath(".") for ASP.NET applications
+        /// and AppDomain.CurrentDomain.BaseDirectory for desktop applications.</param>
         public static void LoadNativeAssemblies(string rootApplicationPath)
         {
             var nativeBinaryPath = IntPtr.Size > 4
@@ -29,6 +39,20 @@ namespace SqlServerTypes
             LoadNativeAssembly(nativeBinaryPath, "SqlServerSpatial140.dll");
         }
 
+        /// <summary>
+        /// Loads the library.
+        /// </summary>
+        /// <param name="libname">The libname.</param>
+        /// <returns>IntPtr.</returns>
+        [DllImport("kernel32.dll", CharSet = CharSet.Auto, SetLastError = true)]
+        private static extern IntPtr LoadLibrary(string libname);
+
+        /// <summary>
+        /// Loads the native assembly.
+        /// </summary>
+        /// <param name="nativeBinaryPath">The native binary path.</param>
+        /// <param name="assemblyName">Name of the assembly.</param>
+        /// <exception cref="Exception"></exception>
         private static void LoadNativeAssembly(string nativeBinaryPath, string assemblyName)
         {
             var path = Path.Combine(nativeBinaryPath, assemblyName);
@@ -41,5 +65,7 @@ namespace SqlServerTypes
                     Marshal.GetLastWin32Error()));
             }
         }
+
+        #endregion Methods
     }
 }

@@ -4,7 +4,9 @@
 
 @foreach (var node in Model)
 {
-    <li class="nav-item @(node.Children.Any()? "has-treeview":"")">
+    var isMenuOpen = node.Children.Any(x => x.IsCurrentNode || x.Children.Any(c => c.IsCurrentNode || c.Children.Any(v => v.IsCurrentNode))) || node.IsCurrentNode ? "menu-open" : "";
+
+    <li class="nav-item @(node.Children.Any()? "has-treeview":"") @isMenuOpen">
         @Html.DisplayFor(m => node)
         @if (node.Children.Any())
         {

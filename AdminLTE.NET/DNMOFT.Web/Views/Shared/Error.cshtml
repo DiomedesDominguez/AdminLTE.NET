@@ -2,8 +2,45 @@
 
 @{
     ViewBag.Title = "Error";
+    string errorCode;
+    if (Request.QueryString.Count != 0)
+    {
+        errorCode = "500";
+    }
+    else
+    {
+        errorCode = "400";
+    }
 }
 
-<h1 class="text-danger">Error.</h1>
-<h2 class="text-danger">An error occurred while processing your request.</h2>
+<div class="error-page">
+    <h2 class="headline text-@(errorCode.StartsWith("4")? "warning":"danger")"> @(errorCode)</h2>
 
+    <div class="error-content">
+        <h3><i class="fas fa-exclamation-triangle text-@(errorCode.StartsWith("4")? "warning":"danger")"></i> Oops! @(errorCode.StartsWith("4") ? "Page not found" : "Something went wrong.") .</h3>
+
+        <p>
+            @if (errorCode.StartsWith("4"))
+            {
+                Html.Raw("We could not find the page you were looking for. ");
+            }
+            else
+            {
+                Html.Raw("We will work on fixing that right away. ");
+            }
+            Meanwhile, you may <a href="@Url.Action("Index","Home")">return to home</a> or try using the search form.
+        </p>
+
+        <form class="search-form">
+            <div class="input-group">
+                <input type="text" name="search" class="form-control" placeholder="Search">
+
+                <div class="input-group-append">
+                    <button type="submit" name="submit" class="btn btn-@(errorCode.StartsWith("4")? "warning":"danger")">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

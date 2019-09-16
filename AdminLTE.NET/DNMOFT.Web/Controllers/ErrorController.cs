@@ -1,61 +1,68 @@
 ﻿// ***********************************************************************
 // Assembly         : DNMOFT.Web
 // Author           : Diomedes Domínguez
-// Created          : 2019-08-23
+// Created          : 2019-09-16
 //
 // Last Modified By : Diomedes Domínguez
 // Last Modified On : 2019-09-16
 // ***********************************************************************
-// <copyright file="HomeController.cs" company="DNMOFT">
+// <copyright file="ErrorController.cs" company="DNMOFT">
 //     Copyright ©  2019
 // </copyright>
 // <summary></summary>
 // ***********************************************************************
 namespace DNMOFT.Web.Controllers
 {
-    using DNMOFT.Web.Helper;
-    using MvcThrottle;
+    using System;
     using System.Web.Mvc;
 
+    using DNMOFT.Web.Helper;
+
+    using MvcThrottle;
+
     /// <summary>
-    /// Class HomeController.
+    /// Class ErrorController.
     /// Implements the <see cref="System.Web.Mvc.Controller" />
     /// </summary>
     /// <seealso cref="System.Web.Mvc.Controller" />
-    [CompressFilter, EnableThrottling]
-    public class HomeController : Controller
+    [CompressFilter,
+    EnableThrottling]
+    public class ErrorController : Controller
     {
         #region Methods
 
         /// <summary>
-        /// Abouts this instance.
+        /// Ajaxes the error.
         /// </summary>
-        /// <returns>ActionResult.</returns>
-        public ActionResult About()
+        /// <param name="id">The identifier.</param>
+        /// <returns>JsonResult.</returns>
+        /// <exception cref="Exception"></exception>
+        /// <exception cref="System.Exception"></exception>
+        [HttpPost]
+        public JsonResult AjaxError(string id)
         {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
+            throw new Exception(id);
         }
 
-        /// <summary>
-        /// Contacts this instance.
-        /// </summary>
-        /// <returns>ActionResult.</returns>
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
-        }
-
+        // GET: Error
         /// <summary>
         /// Indexes this instance.
         /// </summary>
+        /// <param name="id">The identifier.</param>
         /// <returns>ActionResult.</returns>
-        public ActionResult Index()
+        public ActionResult Index(string id)
         {
-            return View();
+            return View("Error");
+        }
+
+        /// <summary>
+        /// Oopses the specified identifier.
+        /// </summary>
+        /// <param name="id">The identifier.</param>
+        /// <returns>ActionResult.</returns>
+        public ActionResult Oops(string id)
+        {
+            return View("Error");
         }
 
         #endregion Methods

@@ -1,14 +1,34 @@
-﻿using System.Web;
-using System.Web.Optimization;
-
+﻿// ***********************************************************************
+// Assembly         : DNMOFT.Web
+// Author           : Diomedes Domínguez
+// Created          : 2019-08-23
+//
+// Last Modified By : Diomedes Domínguez
+// Last Modified On : 2019-09-16
+// ***********************************************************************
+// <copyright file="BundleConfig.cs" company="DNMOFT">
+//     Copyright ©  2019
+// </copyright>
+// <summary></summary>
+// ***********************************************************************
 namespace DNMOFT.Web
 {
+    using System.Web.Optimization;
+
+    /// <summary>
+    /// Class BundleConfig.
+    /// </summary>
     public class BundleConfig
     {
+        #region Methods
+
         // For more information on bundling, visit https://go.microsoft.com/fwlink/?LinkId=301862
+        /// <summary>
+        /// Registers the bundles.
+        /// </summary>
+        /// <param name="bundles">The bundles.</param>
         public static void RegisterBundles(BundleCollection bundles)
         {
-
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                       "~/Scripts/jquery.validate.js",
                       "~/Scripts/jquery.validate.unobtrusive.js"
@@ -25,5 +45,7 @@ namespace DNMOFT.Web
                       "~/Content/css/adminlte.css",
                       "~/Content/site.css"));
         }
+
+        #endregion Methods
     }
 }

@@ -8,21 +8,23 @@
 }
 else if (Model.IsClickable)
 {
+    var isActive = Model.Children.Any(x => x.IsCurrentNode || x.Children.Any(c => c.IsCurrentNode || c.Children.Any(v => v.IsCurrentNode))) || Model.IsCurrentNode ? "active" : "";
     if (!Model.Children.Any())
     {
+
         if (string.IsNullOrEmpty(Model.Description))
         {
-            <a href="@Model.Url" class="nav-link @(Model.IsCurrentNode?"active":"")"><i class="nav-icon fas fa-file"></i><p>@Model.Title</p></a>
+            <a href="@Model.Url" class="nav-link @isActive"><i class="nav-icon fas fa-file"></i><p>@Model.Title</p></a>
         }
         else
         {
-            <a href="@Model.Url" class="nav-link @(Model.IsCurrentNode?"active":"")"><i class="nav-icon @Model.Description"></i><p>@Model.Title</p></a>
+            <a href="@Model.Url" class="nav-link  @isActive"><i class="nav-icon @Model.Description"></i><p>@Model.Title</p></a>
         }
     }
     else
     {
 
-        <a href="#" class="nav-link @(Model.IsCurrentNode?"active":"")">
+        <a href="#" class="nav-link @isActive">
             <i class="nav-icon @Model.Description"></i>
             <p>
                 @Model.Title

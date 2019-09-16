@@ -19,7 +19,7 @@ namespace DNMOFT.Web.Controllers
     using System.Web.Mvc;
 
     using DNMOFT.DataAccess.Helpers;
-    using DNMOFT.Web.Models;
+    using DNMOFT.ViewModel;
 
     using Microsoft.AspNet.Identity;
     using Microsoft.AspNet.Identity.Owin;

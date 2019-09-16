@@ -10,7 +10,9 @@
       <mvcSiteMapNode title="Contact" controller="Home" action="Contact" description="far fa-envelope"  />
       <mvcSiteMapNode title="Examples" key="Examples" action="Login" controller="Account" description="fas fa-balance-scale">
       <mvcSiteMapNode title="Login" controller="Account" action="Login" description="fab fa-accessible-icon"  />
-      <mvcSiteMapNode title="Register" controller="Account" action="Register" description="far fa-address-card"  />
+        <mvcSiteMapNode title="Register" controller="Account" action="Register" description="far fa-address-card"  />
+        <mvcSiteMapNode title="400 Error" controller="Error" action="Index" description="far fa-address-card"  />
+        <mvcSiteMapNode title="500 Error" controller="Error" action="Index2" description="far fa-address-card"  />
         
       </mvcSiteMapNode>
     </mvcSiteMapNode>
