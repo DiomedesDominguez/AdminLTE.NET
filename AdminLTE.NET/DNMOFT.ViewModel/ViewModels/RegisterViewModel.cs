@@ -20,6 +20,8 @@ namespace DNMOFT.ViewModel
     /// </summary>
     public class RegisterViewModel
     {
+        public string UserName { get; set; }
+
         /// <summary>
         /// Gets or sets the email.
         /// </summary>
