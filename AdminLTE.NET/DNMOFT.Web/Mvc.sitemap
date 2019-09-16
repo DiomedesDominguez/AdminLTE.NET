@@ -8,6 +8,11 @@
       <mvcSiteMapNode title="Index" controller="Home" action="Index" description="fab fa-accessible-icon"  />
       <mvcSiteMapNode title="About" controller="Home" action="About" description="far fa-address-card"  />
       <mvcSiteMapNode title="Contact" controller="Home" action="Contact" description="far fa-envelope"  />
+      <mvcSiteMapNode title="Examples" key="Examples" action="Login" controller="Account" description="fas fa-balance-scale">
+      <mvcSiteMapNode title="Login" controller="Account" action="Login" description="fab fa-accessible-icon"  />
+      <mvcSiteMapNode title="Register" controller="Account" action="Register" description="far fa-address-card"  />
+        
+      </mvcSiteMapNode>
     </mvcSiteMapNode>
   </mvcSiteMapNode>
 </mvcSiteMap>
