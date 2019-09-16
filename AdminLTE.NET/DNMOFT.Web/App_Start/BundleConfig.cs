@@ -9,6 +9,11 @@ namespace DNMOFT.Web
         public static void RegisterBundles(BundleCollection bundles)
         {
 
+            bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
+                      "~/Scripts/jquery.validate.js",
+                      "~/Scripts/jquery.validate.unobtrusive.js"
+                      ));
+
             bundles.Add(new ScriptBundle("~/bundles/app").Include(
                       "~/Scripts/jquery-{version}.js",
                       "~/Scripts/bootstrap.bundle.js",

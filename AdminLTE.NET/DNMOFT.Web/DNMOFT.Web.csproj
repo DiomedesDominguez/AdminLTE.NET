@@ -313,6 +313,7 @@
     <Content Include="Content\css\bootstrap.css" />
     <Content Include="Content\css\bootstrap.min.css" />
     <Content Include="Content\css\Chart.css" />
+    <Content Include="Content\css\icheck-bootstrap.css" />
     <Content Include="Content\css\themes\base\accordion.css" />
     <Content Include="Content\css\themes\base\all.css" />
     <Content Include="Content\css\themes\base\autocomplete.css" />
@@ -539,6 +540,7 @@
     <Content Include="Views\Shared\DisplayTemplates\SiteMapNodeModelList.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\SiteMapPathHelperModel.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\SiteMapTitleHelperModel.cshtml" />
+    <Content Include="Views\Shared\_LoginRegistration.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
