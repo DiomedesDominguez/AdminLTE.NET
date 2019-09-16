@@ -8,5 +8,5 @@
     {
         continue;
     }
-    <li class="breadcrumb-item"><a href="#"><i class="@node.Description"></i> @node.Title</a></li>
+    <li class="breadcrumb-item @(node == Model.Last()?"active":"")"> @node.Title</li>
 }
