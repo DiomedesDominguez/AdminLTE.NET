@@ -16,23 +16,23 @@
   "preferNameDirectory": true,
   "primaryOutputs": [
     {
-      "path": "DNMOFT.Web\\DNMOFT.Web.csproj"
+      "path": "AdminLTE.NET.Web\\AdminLTE.NET.Web.csproj"
     },
     {
-      "path": "DNMOFT.DataAccess\\DNMOFT.DataAccess.csproj"
+      "path": "AdminLTE.NET.DataAccess\\AdminLTE.NET.DataAccess.csproj"
     },
     {
-      "path": "DNMOFT.Repository\\DNMOFT.Repository.csproj"
+      "path": "AdminLTE.NET.Repository\\AdminLTE.NET.Repository.csproj"
     },
     {
-      "path": "DNMOFT.Business\\DNMOFT.Business.csproj"
+      "path": "AdminLTE.NET.Business\\AdminLTE.NET.Business.csproj"
     },
     {
-      "path": "DNMOFT.ViewModel\\DNMOFT.ViewModel.csproj"
+      "path": "AdminLTE.NET.ViewModel\\AdminLTE.NET.ViewModel.csproj"
     }
   ],
   "shortName": "adminlte",
-  "sourceName": "DNMOFT",
+  "sourceName": "AdminLTE.NET",
   "tags": {
     "language": "C#",
     "type": "project"
