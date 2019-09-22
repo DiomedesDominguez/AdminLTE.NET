@@ -1,0 +1,40 @@
+{
+  "author": "Diomedes Ignacio Domínguez Ureña",
+  "classifications": [ "Web" ],
+  "defaultName": "WebProject",
+  "description": "A multi-project template solution using AdminLTE as front-end for an ASP.NET MVC4.5 application. It is also included our own modifications for the jTable library to be used with bootstrap.",
+  "groupIdentity": "AdminLTE.NET",
+  "guids": [
+    "{545ED3EA-9E1D-4EBA-98F8-8CAF1761BD5C}",
+    "{04128415-183F-4420-8E42-8A43C696567B}",
+    "{28497BD2-1D36-4C24-9947-6F9BB6E88738}",
+    "{1B2007BC-B206-44A3-B8EB-4679678DBC02}",
+    "{C7F3FF90-8705-4BC3-8B92-4BA54C49BDA0}"
+  ],
+  "identity": "AdminLTE.NET.CSharp",
+  "name": "AdminLTE.NET",
+  "preferNameDirectory": true,
+  "primaryOutputs": [
+    {
+      "path": "DNMOFT.Web\\DNMOFT.Web.csproj"
+    },
+    {
+      "path": "DNMOFT.DataAccess\\DNMOFT.DataAccess.csproj"
+    },
+    {
+      "path": "DNMOFT.Repository\\DNMOFT.Repository.csproj"
+    },
+    {
+      "path": "DNMOFT.Business\\DNMOFT.Business.csproj"
+    },
+    {
+      "path": "DNMOFT.ViewModel\\DNMOFT.ViewModel.csproj"
+    }
+  ],
+  "shortName": "adminlte",
+  "sourceName": "DNMOFT",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  }
+}
